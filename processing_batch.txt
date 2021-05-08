@@ -1,0 +1,6 @@
+set source_module=counter
+set testbentch_module=counter_tb
+
+iverilog -o "%testbentch_module%.vvp" %testbentch_module%.v %source_module%.v
+vvp -n "%testbentch_module%.vvp"
+gtkwave "%testbentch_module%.vcd"
